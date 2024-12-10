@@ -1,4 +1,4 @@
-module heygen-assignment
+module github.com/davidtran001/HeyGen-Assignment
 
 go 1.23.4
 

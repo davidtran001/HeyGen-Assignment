@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"heygen-assignment/hgclient"
+	"github.com/davidtran001/HeyGen-Assignment/hgclient"
 )
 
 func main() {

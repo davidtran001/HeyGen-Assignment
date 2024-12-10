@@ -6,8 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"heygen-assignment/hgclient"
-
+	"github.com/davidtran001/HeyGen-Assignment/hgclient"
 	"github.com/stretchr/testify/require"
 )
 
