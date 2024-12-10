@@ -2,16 +2,13 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"math/rand"
 	"net/http"
-	"os"
 	"time"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	"github.com/joho/godotenv"
 )
 
 type Response struct {
@@ -19,17 +16,6 @@ type Response struct {
 }
 
 func main() {
-	// Load .env file
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
-	port := os.Getenv("PORT")
-	if port == "" {
-		log.Fatal("Port is not defined in .env file")
-	}
-
 	delayMs := 8000 // in ms
 
 	// Capture the start time
@@ -66,6 +52,6 @@ func main() {
 		startTime = time.Now()
 	})
 
-	log.Printf("Starting server on :%s\n", port)
-	http.ListenAndServe(fmt.Sprintf(":%s", port), r)
+	log.Printf("Starting server on :%s\n", "8080")
+	http.ListenAndServe(":8080", r)
 }
