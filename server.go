@@ -8,7 +8,6 @@ import (
 	"time"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
 )
 
 type Response struct {
@@ -16,13 +15,13 @@ type Response struct {
 }
 
 func main() {
-	delayMs := 8000 // in ms
+	delayMs := 10000 // in ms
 
 	// Capture the start time
 	startTime := time.Now()
 
 	r := chi.NewRouter()
-	r.Use(middleware.Logger)
+	//r.Use(middleware.Logger)
 
 	// GET: /status will send the status of the current request
 	r.Get("/status", func(w http.ResponseWriter, r *http.Request) {

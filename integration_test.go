@@ -16,9 +16,6 @@ func TestIntegrationServer(t *testing.T) {
 		main()
 	}()
 
-	// Wait for the server to start up
-	time.Sleep(2 * time.Second)
-
 	// Create an hgclient instance pointing to the server
 	client := hgclient.NewClient("http://localhost:8080", 1, 5, 30, 2.0)
 
