@@ -12,7 +12,7 @@ It uses an exponential backoff strategy for polling, starting with a short initi
 ## Installation
 To install and add the package to your Go project, run the following command:
 
-'''
+`
 go get github.com/davidtran001/HeyGen-Assignment/hgclient
 `
 
